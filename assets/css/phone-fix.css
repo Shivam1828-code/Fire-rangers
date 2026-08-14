@@ -6,7 +6,7 @@
 .footer-phone-row {
   display: flex !important;
   flex-wrap: nowrap !important;
-  gap: 16px !important;
+  gap: 8px !important;
   align-items: center !important;
   margin: 16px 0 0 !important;
   padding: 0 !important;
@@ -16,11 +16,11 @@
 .footer-phone-row span {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 6px !important;
+  gap: 4px !important;
   white-space: nowrap !important;
   margin-bottom: 0 !important;
   flex: 0 0 auto !important;
-  font-size: 15px !important;
+  font-size: 13px !important;
   color: #ffffff !important;
 }
 
@@ -32,7 +32,7 @@
   border-radius: 0 !important;
   line-height: 1 !important;
   background: transparent !important;
-  font-size: 14px !important;
+  font-size: 11px !important;
   color: #ef1b24 !important;
 }
 
@@ -50,5 +50,13 @@
   display: flex !important;
   flex-wrap: nowrap !important;
   flex-direction: row !important;
-  gap: 16px !important;
+  gap: 8px !important;
+}
+
+/* Very small phones: allow wrap so numbers never get cut/fit off-screen */
+@media (max-width: 380px){
+  .footer-phone-row,
+  .footer-recreated-contact .footer-phone-row{
+    flex-wrap: wrap !important;
+  }
 }
