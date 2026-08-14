@@ -596,10 +596,10 @@
 /* Footer phone row - phone icon before each number */
 .footer-phone-row {
     display: flex !important;
-    flex-wrap: nowrap !important;
+    flex-wrap: wrap !important;
     align-items: center !important;
-    column-gap: 8px !important;
-    gap: 8px !important;
+    column-gap: 10px !important;
+    gap: 6px 10px !important;
     margin: 0 0 6px !important;
     padding: 0 !important;
     line-height: 1.8;
@@ -607,12 +607,12 @@
 .footer-phone-row span {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 3px !important;
+    gap: 5px !important;
     white-space: nowrap !important;
     margin-bottom: 0 !important;
     font-family: inherit;
     line-height: 1.8;
-    font-size: 12.5px !important;
+    font-size: 13px !important;
     letter-spacing: 0 !important;
 }
 .footer-phone-row span i {
@@ -649,6 +649,20 @@
     text-align: center;
     transform: translateX(-14px);
 }
+
+/* Contact page email list - keep long Gmail ids from being cut on mobile */
+.content_block_6 .info-inner .info-list li p {
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+}
+.content_block_6 .info-inner .info-list li p a {
+    overflow-wrap: anywhere !important;
+    word-break: break-all !important;
+    color: #201b1b !important;
+    text-decoration: none !important;
+    display: inline-block;
+    max-width: 100%;
+}
 @media (max-width: 400px) {
     .contact-plain-list {
         justify-content: center;
@@ -659,4 +673,57 @@
         flex-basis: 100%;
         text-align: center;
     }
+}
+
+/* =====================================================================
+   Navbar Product megamenu - stack columns on tablet & mobile so the
+   product titles never overlap each other
+   ===================================================================== */
+@media (max-width: 1199px) and (min-width: 992px){
+  .product-megamenu.product-megamenu .column,
+  .megamenu.product-megamenu .column{
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  .megamenu.product-megamenu .row{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 991px){
+  .product-megamenu.product-megamenu .column,
+  .megamenu.product-megamenu .column{
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    float: none !important;
+  }
+  /* Stack megamenu columns vertically so product titles never overlap */
+  .megamenu.product-megamenu .row{
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 20px 0 !important;
+  }
+}
+
+/* Make sure the megamenu columns themselves don't float/collapse */
+.product-megamenu .row.clearfix .column.product-menu-card{
+  min-height: 0 !important;
+}
+
+/* When the mobile menu (dashboard) is open, hide the Product megamenu popup */
+@media (max-width: 991px){
+  body.mobile-menu-visible .megamenu.product-megamenu,
+  body.mobile-menu-visible .product-megamenu{
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+/* Remove the dropdown arrow on the Product item inside the mobile menu */
+@media (max-width: 991px){
+  .mobile-menu .navigation li.dropdown.fire-rangers-products-menu > .dropdown-btn{
+    display: none !important;
+  }
 }

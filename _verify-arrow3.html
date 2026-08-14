@@ -1,0 +1,37 @@
+<html><head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/font-awesome-all.css">
+<link rel="stylesheet" href="assets/css/product-fix.css">
+<script src="assets/js/jquery.js"></script>
+</head>
+<body>
+<div class="main-header">
+<div class="menu-area">
+<nav class="main-menu"><ul class="navigation clearfix">
+<li class="dropdown fire-rangers-products-menu"><a href="service.html">Product</a><div class="megamenu product-megamenu"><div class="row clearfix"><div class="col-lg-3 column product-menu-card"><h4>Fire Extinguishers</h4></div></div></div></li>
+<li><a href="index.html">Home</a></li>
+</ul></nav>
+</div>
+</div>
+<div class="mobile-menu"><div class="menu-backdrop"></div><div class="close-btn">X</div>
+<nav class="menu-box"><div class="menu-outer"></div></nav></div>
+<pre id="dump"></pre>
+<script>
+window.addEventListener('load',function(){setTimeout(function(){
+ var li=document.querySelectorAll('.mobile-menu .navigation li.dropdown');
+ var d='mobile menu dropdown items='+li.length;
+ if(li.length){
+   var b=document.createElement('div');b.className='dropdown-btn';
+   b.innerHTML='<span class="fas fa-angle-down"></span>';
+   li[0].appendChild(b);
+ }
+ var btn=document.querySelector('.mobile-menu .fire-rangers-products-menu > .dropdown-btn');
+ d+='\nbtn exists='+(!!btn);
+ if(btn){var s=getComputedStyle(btn);d+='\ndisplay='+s.display;}
+ else{d+='\nno dropdown-btn target';}
+ document.getElementById('dump').textContent=d;
+},500);});
+</script>
+</body></html>
