@@ -1,0 +1,54 @@
+/* =========================================
+   Footer Phone Numbers Fix
+   Force all 3 numbers on one line, no overlap
+   ========================================= */
+
+.footer-phone-row {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 16px !important;
+  align-items: center !important;
+  margin: 16px 0 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.footer-phone-row span {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  white-space: nowrap !important;
+  margin-bottom: 0 !important;
+  flex: 0 0 auto !important;
+  font-size: 15px !important;
+  color: #ffffff !important;
+}
+
+.footer-phone-row span i {
+  flex-shrink: 0 !important;
+  border: none !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  line-height: 1 !important;
+  background: transparent !important;
+  font-size: 14px !important;
+  color: #ef1b24 !important;
+}
+
+/* Override the circular icon styling from parent */
+.footer-recreated-contact .footer-phone-row span i {
+  border: none !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.footer-recreated-contact .footer-phone-row {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  flex-direction: row !important;
+  gap: 16px !important;
+}

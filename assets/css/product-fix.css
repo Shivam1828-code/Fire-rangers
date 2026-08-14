@@ -373,9 +373,23 @@
     margin-left: 60px !important;
   }
 
+  /* Divider after the 4 value-tile emojis (mirror of the contact divider) */
+  .main-footer.fire-rangers-footer-bg .footer-brand-panel{
+    border-right: 1px solid rgba(255,255,255,.18) !important;
+    padding-right: 36px !important;
+  }
+
   /* Value tiles: nudge left a little */
   .main-footer.fire-rangers-footer-bg .footer-brand-panel{
     transform: translateX(-12px) !important;
+  }
+
+  /* Move the 4 tile emojis up a touch */
+  .footer-values span{
+    justify-content: flex-start !important;
+  }
+  .footer-values span i{
+    margin-top: -4px !important;
   }
 }
 
@@ -514,7 +528,7 @@
     gap: 28px !important;
   }
 
-  .main-footer.fire-rangers-footer-bg .footer-recreated-links,
+.main-footer.fire-rangers-footer-bg .footer-recreated-links,
   .main-footer.fire-rangers-footer-bg .footer-recreated-contact{
     border-left: 0 !important;
     margin-left: 0 !important;
@@ -522,6 +536,8 @@
   }
 
   .main-footer.fire-rangers-footer-bg .footer-brand-panel{
+    border-right: 0 !important;
+    padding-right: 0 !important;
     transform: none !important;
   }
 }
@@ -538,12 +554,14 @@
     padding: 0 !important;
   }
 
-  .main-footer.fire-rangers-footer-bg .footer-recreated-links,
+.main-footer.fire-rangers-footer-bg .footer-recreated-links,
   .main-footer.fire-rangers-footer-bg .footer-recreated-contact,
   .main-footer.fire-rangers-footer-bg .footer-brand-panel{
     border-left: 0 !important;
+    border-right: 0 !important;
     margin-left: 0 !important;
     padding-left: 0 !important;
+    padding-right: 0 !important;
     transform: none !important;
   }
 
@@ -554,4 +572,91 @@
   .footer-values{
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
+
+  /* Product details: prevent specs table forcing row wider than screen */
+  .product-detail-panel .product-detail-table{
+    min-width: 0 !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
+  }
+
+  .product-detail-table th{
+    width: 45% !important;
+  }
+
+  /* Contact: keep form/map from spilling off the right */
+  .contact-section{
+    overflow-x: hidden !important;
+  }
+
+  .content_block_6 .info-inner{
+    max-width: 100% !important;
+  }
+}
+/* Footer phone row - phone icon before each number */
+.footer-phone-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    column-gap: 8px !important;
+    gap: 8px !important;
+    margin: 0 0 6px !important;
+    padding: 0 !important;
+    line-height: 1.8;
+}
+.footer-phone-row span {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+    white-space: nowrap !important;
+    margin-bottom: 0 !important;
+    font-family: inherit;
+    line-height: 1.8;
+    font-size: 12.5px !important;
+    letter-spacing: 0 !important;
+}
+.footer-phone-row span i {
+    color: #ef1b36 !important;
+    margin-right: 3px;
+    font-size: 9px;
+    flex-shrink: 0 !important;
+    border: none !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+}
+
+/* Contact page - 3 phone numbers: 2 side by side, 1 centered below */
+.contact-plain-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 18px;
+    row-gap: 6px;
+}
+.contact-plain-list a {
+    white-space: nowrap;
+    color: #201b1b !important;
+    text-decoration: none;
+}
+.contact-plain-list a:hover {
+    color: #201b1b !important;
+}
+.contact-plain-list .phone-three {
+    flex-basis: 100%;
+    justify-content: center;
+    text-align: center;
+    transform: translateX(-14px);
+}
+@media (max-width: 400px) {
+    .contact-plain-list {
+        justify-content: center;
+        column-gap: 14px;
+        text-align: center;
+    }
+    .contact-plain-list .phone-three {
+        flex-basis: 100%;
+        text-align: center;
+    }
 }
