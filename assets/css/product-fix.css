@@ -1,0 +1,557 @@
+/* =====================================================================
+   Fire Rangers PRODUCT CATALOG - dedicated fix stylesheet
+   Loaded AFTER style.css and responsive.css so these win the cascade.
+   Fixes: product grid columns, cards, image cropping + navbar megamenu.
+   ===================================================================== */
+.product-category-section .auto-container,
+.old-product-catalog .auto-container{
+  max-width: 1400px !important;
+  width: 100% !important;
+  padding-left: 28px !important;
+  padding-right: 28px !important;
+}
+
+/* Product grid -> 3 clean columns (desktop), 2 / 1 on smaller screens */
+.product-grid{
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 32px !important;
+}
+
+.product-grid .product-item{
+  display: flex !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+/* Product card */
+.product-grid .product-card{
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 30px !important;
+  border: 1px solid #eee8e6 !important;
+  border-radius: 0 !important;
+  background: #ffffff !important;
+  box-shadow: 0 10px 35px rgba(34,29,29,.08) !important;
+  transition: transform .3s ease, box-shadow .3s ease !important;
+}
+
+.product-grid .product-card:hover{
+  transform: translateY(-6px) !important;
+  box-shadow: 0 18px 45px rgba(34,29,29,.14) !important;
+}
+
+/* Product image area -> fixed, soft background, images NOT cropped */
+.product-grid .product-image{
+  width: 100% !important;
+  height: 250px !important;
+  margin-bottom: 26px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  background: #f7f4f2 !important;
+  border: 1px solid #f0e9e6 !important;
+}
+
+.product-grid .product-image img{
+  width: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin: 0 auto !important;
+}
+
+.product-grid .product-card h3{
+  color: #221d1d !important;
+  font-size: 24px !important;
+  line-height: 1.2 !important;
+  margin-bottom: 12px !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+}
+
+.product-grid .product-card p{
+  color: #6d6666 !important;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+  margin-bottom: 24px !important;
+}
+
+.product-grid .product-enquiry-btn{
+  margin-top: auto !important;
+  width: 100% !important;
+  align-self: stretch !important;
+}
+
+/* Product grid responsive */
+@media (max-width: 1199px) and (min-width: 992px){
+  .product-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 991px){
+  .product-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 599px){
+  .product-grid{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Navbar Product megamenu dropdown -> centered, above all content */
+.main-menu .navigation > li > .megamenu,
+.main-menu .navigation > li.dropdown > .megamenu,
+.product-megamenu,
+.fire-rangers-products-menu .megamenu{
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: 100% !important;
+  transform: translateX(-50%) !important;
+  width: min(92vw, 1240px) !important;
+  z-index: 99999 !important;
+  margin: 0 !important;
+}
+
+.main-menu .navigation > li > .megamenu.row,
+.main-menu .navigation > li.dropdown > .megamenu.row{
+  transform: translateX(-50%) !important;
+}
+
+/* Product menu header row (megamenu h4 headings) fixed to a light card */
+.megamenu.product-megamenu .product-menu-card{
+  padding: 6px 0 !important;
+}
+
+/* Navbar height bump */
+.main-header .outer-box,
+.sticky-header .outer-box{
+  min-height: 104px !important;
+  height: 104px !important;
+}
+
+.main-header .main-menu .navigation > li > a,
+.sticky-header .main-menu .navigation > li > a{
+  padding: 40px 0 !important;
+}
+
+.main-header .main-menu .navigation > li,
+.sticky-header .main-menu .navigation > li{
+  margin: 0 16px !important;
+}
+
+/* Navbar: sit a little lower (floating header) */
+.main-header .header-lower,
+.main-header.style-two .header-lower{
+  position: relative !important;
+  top: 10px !important;
+}
+
+/* Navbar hover animations */
+.main-header .main-menu .navigation > li > a,
+.sticky-header .main-menu .navigation > li > a{
+  position: relative !important;
+  transition: color .3s ease !important;
+}
+
+.main-header .main-menu .navigation > li > a:after,
+.sticky-header .main-menu .navigation > li > a:after{
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 28px !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: #e32020 !important;
+  transform: scaleX(0) !important;
+  transform-origin: left !important;
+  transition: transform .35s ease !important;
+}
+
+.main-header .main-menu .navigation > li > a:hover:after,
+.main-header .main-menu .navigation > li.current > a:after,
+.sticky-header .main-menu .navigation > li > a:hover:after{
+  transform: scaleX(1) !important;
+}
+
+.main-header .main-menu .navigation > li > a:hover,
+.sticky-header .main-menu .navigation > li > a:hover{
+  color: #f0a35b !important;
+}
+
+/* Megamenu dropdown: fade + slide-in on hover */
+.main-menu .navigation > li.product-megamenu-item > .megamenu,
+.main-menu .navigation > li.dropdown > .megamenu,
+.product-megamenu,
+.fire-rangers-products-menu .megamenu{
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateX(-50%) translateY(12px) !important;
+  transition: opacity .3s ease, transform .3s ease, visibility .3s ease !important;
+}
+
+.main-menu .navigation > li.dropdown:hover > .megamenu,
+.fire-rangers-products-menu:hover .megamenu,
+.main-menu .navigation > li.fire-rangers-products-menu:hover > .megamenu{
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+/* Logo -> circular */
+.main-header .logo-box .logo img,
+.main-header.style-two .logo-box .logo img,
+.sticky-header .logo-box .logo img{
+  width: 72px !important;
+  height: 72px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 3px solid rgba(255,255,255,.9) !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,.30) !important;
+}
+
+.main-header .logo-box .logo,
+.main-header.style-two .logo-box .logo,
+.sticky-header .logo-box .logo{
+  width: 72px !important;
+  height: 72px !important;
+}
+
+/* Megamenu: 3 equal columns split the full width (no empty 4th quarter) */
+.megamenu.product-megamenu .row{
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.megamenu.product-megamenu .row .product-menu-card{
+  width: 100% !important;
+  max-width: none !important;
+  flex: none !important;
+  float: none !important;
+}
+
+/* Hide the 4 big image panels shown above the product category tabs */
+.requested-product-sections{
+  display: none !important;
+}
+
+/* Product page category blocks + headings */
+.product-category-block{
+  margin-bottom: 64px !important;
+  scroll-margin-top: 110px !important;
+}
+
+.product-category-block:last-child{
+  margin-bottom: 0 !important;
+}
+
+.product-category-title{
+  text-align: center !important;
+  margin-bottom: 38px !important;
+}
+
+.product-category-title h2{
+  color: #221d1d !important;
+  font-size: 34px !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  margin: 0 0 10px !important;
+  letter-spacing: 1px !important;
+}
+
+.product-category-title h2:after{
+  content: "" !important;
+  display: block !important;
+  width: 64px !important;
+  height: 3px !important;
+  background: #d85b22 !important;
+  margin: 14px auto 0 !important;
+}
+
+.product-category-title p{
+  color: #6d6666 !important;
+  font-size: 17px !important;
+  line-height: 1.55 !important;
+  margin: 0 auto !important;
+  max-width: 760px !important;
+}
+
+/* Show Fire Hydrant System cards (override older hide rule on this selector) */
+.product-category-section .product-item[data-category="hydrant"]:not(.requested-service-card),
+.product-grid .product-item[data-category="hydrant"]{
+  display: flex !important;
+}
+
+/* Team section (3 firefighter cards) on home page - restore */
+.team-section{
+  display: block !important;
+}
+
+/* About page: lift feature image slightly above the banner bottom */
+.about-feature-section .about-feature-image{
+  transform: translateY(-30px) !important;
+  margin-bottom: -30px !important;
+}
+
+/* Contact page: push content below the banner further down */
+.contact-section{
+  padding-top: 40px !important;
+}
+
+/* =====================================================================
+   Footer (fire-rangers reference footer) refinements
+   ===================================================================== */
+
+/* Brand-mark fire logo removed from HTML (5 pages). */
+.footer-brand-mark{
+  display: none !important;
+}
+
+/* Value tiles (QUALITY/CERTIFIED/EXPERT/24-7) -> proper icon boxes */
+.footer-values{
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  margin-top: 30px !important;
+}
+
+.footer-values span{
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  padding: 18px 12px !important;
+  background: rgba(255,255,255,.05) !important;
+  border: 1px solid rgba(255,255,255,.16) !important;
+  border-radius: 10px !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+  font-weight: 800 !important;
+  min-height: 96px !important;
+}
+
+.footer-values i{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 46px !important;
+  height: 46px !important;
+  margin: 0 !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(239,27,36,.55) !important;
+  font-size: 22px !important;
+  color: #ff4d54 !important;
+}
+
+/* Links column: nudge right a little (large screens only) */
+@media (min-width: 1200px){
+  .main-footer.fire-rangers-footer-bg .footer-recreated-links{
+    margin-left: 56px !important;
+  }
+
+  /* Vertical divider between Links and Contact Details */
+  .main-footer.fire-rangers-footer-bg .footer-recreated-contact{
+    border-left: 1px solid rgba(255,255,255,.18) !important;
+    padding-left: 36px !important;
+    margin-left: 60px !important;
+  }
+
+  /* Value tiles: nudge left a little */
+  .main-footer.fire-rangers-footer-bg .footer-brand-panel{
+    transform: translateX(-12px) !important;
+  }
+}
+
+/* Home "About Our Company" screenshot - reduce full-bleed width */
+.history-reference-image{
+  width: 92vw !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+}
+
+.history-reference-image img{
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Home "Fire Safety Products" - 4 cards fill the row evenly */
+.fsp-products-grid{
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 991px){
+  .fsp-products-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 599px){
+  .fsp-products-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* A touch more breathing room between top columns */
+.main-footer.fire-rangers-footer-bg .footer-recreated-top{
+  gap: 40px !important;
+}
+
+/* Brand panel row: keep values aligned with the columns above */
+.main-footer.fire-rangers-footer-bg .footer-brand-panel{
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+/* =====================================================================
+   Product Details page - push hero heading below navbar + soften text
+   ===================================================================== */
+
+/* Navbar is transparent here, so drop the hero heading clear of it */
+.product-detail-page .product-details-hero{
+  padding-top: 150px !important;
+}
+
+.product-details-title{
+  margin-top: 8px !important;
+}
+
+/* Softer, lighter heading weight */
+.product-details-title h1{
+  font-weight: 600 !important;
+}
+
+.product-details-title p{
+  font-weight: 400 !important;
+  color: #6a6363 !important;
+}
+
+.product-detail-panel h3{
+  font-weight: 700 !important;
+}
+
+.product-detail-panel .product-detail-table th{
+  font-weight: 700 !important;
+  color: #262020 !important;
+}
+
+.product-detail-panel .product-detail-table td{
+  font-weight: 400 !important;
+  color: #6a6363 !important;
+}
+
+/* =====================================================================
+   Scrolled navbar - keep menu text inside the bar (solid, contained)
+   ===================================================================== */
+
+.main-header.fixed-header .header-lower,
+.fixed-header .sticky-header{
+  background: rgba(16,14,14,.18) !important;
+  box-shadow: none !important;
+}
+
+/* Remove the lower-shift so the text stays inside the fixed bar */
+.main-header.fixed-header .header-lower{
+  top: 0 !important;
+}
+
+.fixed-header .sticky-header .outer-box,
+.main-header.fixed-header .outer-box{
+  height: 76px !important;
+  min-height: 76px !important;
+  overflow: hidden !important;
+}
+
+.fixed-header .sticky-header .main-menu .navigation > li,
+.main-header.fixed-header .main-menu .navigation > li{
+  display: flex !important;
+  align-items: center !important;
+  height: 76px !important;
+}
+
+.fixed-header .sticky-header .main-menu .navigation > li > a,
+.main-header.fixed-header .main-menu .navigation > li > a{
+  padding: 0 !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+.fixed-header .sticky-header .main-menu .navigation > li > a:after{
+  bottom: 22px !important;
+}
+
+/* =====================================================================
+   Footer responsive - fit cleanly on tablet & mobile
+   ===================================================================== */
+
+/* Tablet: shrink the fixed 3-column footprints so nothing overflows */
+@media (min-width: 992px) and (max-width: 1199px){
+  .main-footer.fire-rangers-footer-bg .footer-recreated{
+    padding: 44px 24px 22px !important;
+  }
+
+  .main-footer.fire-rangers-footer-bg .footer-recreated-top{
+    grid-template-columns: minmax(240px, 300px) minmax(150px, 180px) 1fr !important;
+    gap: 28px !important;
+  }
+
+  .main-footer.fire-rangers-footer-bg .footer-recreated-links,
+  .main-footer.fire-rangers-footer-bg .footer-recreated-contact{
+    border-left: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .main-footer.fire-rangers-footer-bg .footer-brand-panel{
+    transform: none !important;
+  }
+}
+
+/* Mobile/tablet: single clean stacked column, full width, no dividers */
+@media (max-width: 991px){
+  .main-footer.fire-rangers-footer-bg .footer-recreated{
+    padding: 40px 20px 22px !important;
+  }
+
+  .main-footer.fire-rangers-footer-bg .footer-recreated-top{
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+    padding: 0 !important;
+  }
+
+  .main-footer.fire-rangers-footer-bg .footer-recreated-links,
+  .main-footer.fire-rangers-footer-bg .footer-recreated-contact,
+  .main-footer.fire-rangers-footer-bg .footer-brand-panel{
+    border-left: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    transform: none !important;
+  }
+
+  .main-footer.fire-rangers-footer-bg .footer-recreated-links a{
+    font-size: 20px !important;
+  }
+
+  .footer-values{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}

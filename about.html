@@ -8,7 +8,7 @@
 <title>About Fire Rangers - Fire Safety Solutions</title>
 
 <!-- Fav Icon -->
-<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="assets/images/custom/fire-rangers-logo.jpg" type="image/jpeg">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
@@ -23,6 +23,7 @@
 <link href="assets/css/color.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
+<link href="assets/css/product-fix.css" rel="stylesheet">
 
 </head>
 
@@ -124,7 +125,30 @@
                                                                         <ul class="navigation clearfix">
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="about.html">About</a></li>
-                                        <li><a href="service.html">Product</a></li>
+                                        <li class="dropdown fire-rangers-products-menu"><a href="service.html">Product</a>
+                                            <div class="megamenu product-megamenu">
+                                                <div class="row clearfix">
+                                                    <div class="col-lg-3 column product-menu-card">
+                                                        <h4><a href="service.html#fire-extinguishers"><i class="fas fa-fire-extinguisher"></i>Fire Extinguishers</a></h4>
+                                                        <ul>
+                                                            <li><a href="service.html#fire-extinguishers">ABC</a></li><li><a href="service.html#fire-extinguishers">CO2</a></li><li><a href="service.html#fire-extinguishers">Mechanical Foam</a></li><li><a href="service.html#fire-extinguishers">Water CO2</a></li><li><a href="service.html#fire-extinguishers">K Type</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 column product-menu-card">
+                                                        <h4><a href="service.html#hydrant-amc"><i class="fas fa-tint"></i>Fire Hydrant System</a></h4>
+                                                        <ul>
+                                                            <li><a href="service.html#hydrant-amc">AMC</a></li><li><a href="service.html#sprinkler-system">Sprinkler System</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 column product-menu-card">
+                                                        <h4><a href="service.html#fire-alarm-system"><i class="fas fa-bell"></i>Fire Alarm System</a></h4>
+                                                        <ul>
+                                                            <li><a href="service.html#fire-alarm-system">AMC</a></li><li><a href="service.html#fire-alarm-system">Smoke Detector</a></li><li><a href="service.html#fire-alarm-system">Heat Detector</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                     <!-- old full navbar hidden
@@ -198,7 +222,7 @@
                                             <ul>
                                                 <li><a href="blog.html">Blog Grid</a></li>
                                                 <li><a href="blog-2.html">Blog Standard</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
+                                                <li><a>Blog Details</a></li>
                                             </ul>
                                         </li>    
                                     </ul>
@@ -278,7 +302,7 @@
         <!--Page Title-->
         <!-- <section class="page-title centred" style="background-image: url(assets/images/background/page-title.jpg);"> -->
         <!-- <section class="page-title centred" style="background-image: url(assets/images/custom/fire-alarm-safety-products.png);"> -->
-        <section class="page-title centred" style="background-image: url(assets/images/custom/about-fire-rangers-inspection.png);">
+        <section class="page-title about-page-banner centred" style="background-image: url(assets/images/custom/about-fire-rangers-inspection.png);">
             <div class="overlay-bg"></div>
             <div class="pattern-layer"></div>
             <div class="auto-container">
@@ -296,8 +320,8 @@
         <!--End Page Title-->
 
 
-        <!-- about-section -->
-        <section class="about-section border-bottom">
+        <!-- about-section old layout preserved and hidden -->
+        <section class="about-section border-bottom" style="display: none;">
             <div class="auto-container">
                 <div class="row clearfix">
                     <div class="col-lg-6 col-md-12 col-sm-12 image-column">
@@ -315,13 +339,30 @@
                                     <h2>Reliable Fire Protection Products, Installation & Maintenance</h2>
                                 </div>
                                 <div class="text">
-                                    <p>We provide fire extinguishers, hydrant systems, suppression systems, alarms, safety products and maintenance support for workplaces that need dependable protection and inspection-ready documentation.</p>
+                                    <p>Fire Rangers provides complete fire protection support for commercial, residential and industrial sites. From the first site survey to installation, testing and annual maintenance, our team helps clients keep their people, property and operations protected.</p>
+                                    <p>We supply fire extinguishers, hydrant systems, fire alarms, suppression systems and safety products with practical guidance, responsive service and clear inspection-ready documentation.</p>
                                 </div>
+                                <!-- about extra details hidden
                                 <ul class="list-item clearfix">
                                     <li>Site surveys, safety audits and product selection support</li>
                                     <li>Fire extinguisher supply, refilling and pressure testing</li>
+                                    <li>Hydrant, sprinkler, fire alarm and suppression system support</li>
+                                    <li>AMC visits, preventive checks and service documentation</li>
                                 </ul>
+                                <div class="inner-box clearfix">
+                                    <div class="single-item">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <h4>Safety First</h4>
+                                        <p>Solutions planned around real site risks.</p>
+                                    </div>
+                                    <div class="single-item">
+                                        <i class="fas fa-tools"></i>
+                                        <h4>Reliable Support</h4>
+                                        <p>Service that stays ready when you need it.</p>
+                                    </div>
+                                </div>
                                 <div class="btn-box"><a href="contact.html" class="theme-btn-one">Request Inspection</a></div>
+                                about extra details hidden end -->
                             </div>
                         </div>
                     </div>
@@ -329,6 +370,30 @@
             </div>
         </section>
         <!-- about-section end -->
+
+        <!-- Fire Rangers about feature layout based on the supplied reference. -->
+        <section class="about-feature-section">
+            <div class="auto-container">
+                <div class="about-feature-grid">
+                    <figure class="about-feature-image">
+                        <img src="assets/images/custom/about-fire-rangers-feature.png" alt="Fire Rangers fire protection products and systems">
+                    </figure>
+                    <div class="about-feature-content">
+                        <div class="about-feature-kicker">About Fire Rangers</div>
+                        <span class="about-feature-line"></span>
+                        <h2>Reliable Fire Protection<br>Products, Installation &amp;<br><strong>Maintenance</strong></h2>
+                        <p>Fire Rangers provides complete fire protection support for commercial, residential and industrial sites. From the first site survey to installation, testing and annual maintenance, our team helps clients keep their people, property and operations protected.</p>
+                        <p>We supply fire extinguishers, hydrant systems, fire alarms, suppression systems and safety products with practical guidance, responsive service and clear inspection-ready documentation.</p>
+                        <div class="about-feature-stats">
+                            <div class="about-feature-stat"><i class="fas fa-shield-alt"></i><strong>2500+</strong><span>Projects Completed</span></div>
+                            <div class="about-feature-stat"><i class="fas fa-users"></i><strong>1500+</strong><span>Satisfied Clients</span></div>
+                            <div class="about-feature-stat"><i class="fas fa-award"></i><strong>10+</strong><span>Years of Experience</span></div>
+                            <div class="about-feature-stat"><i class="fas fa-headset"></i><strong>24/7</strong><span>Support Available</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
         <!-- clients-section -->
@@ -566,6 +631,29 @@
         cta-section hidden end -->
 
 
+        <!-- extinguisher-parts-section -->
+        <section class="extinguisher-parts-section">
+            <div class="auto-container">
+                <div class="extinguisher-parts-grid">
+                    <div class="extinguisher-parts-column">
+                        <article class="extinguisher-part-item"><i class="fas fa-tachometer-alt"></i><div><h3>Fire Extinguisher Pressure Indicator Gauge</h3><p>The pressure gauge shows when the extinguisher is charged and ready for use.</p></div></article>
+                        <article class="extinguisher-part-item"><i class="fas fa-water"></i><div><h3>Fire Extinguisher Discharge Hose</h3><p>The high-pressure hose directs the extinguishing agent safely toward the fire.</p></div></article>
+                        <article class="extinguisher-part-item"><i class="fas fa-key"></i><div><h3>Fire Extinguisher Safety Pin</h3><p>The safety pin prevents accidental discharge until the extinguisher is needed.</p></div></article>
+                    </div>
+                    <!-- <div class="extinguisher-parts-image"><img src="assets/images/custom/fire-extinguisher-service.png" alt="Fire extinguisher parts and safety equipment"></div> -->
+                    <!-- <div class="extinguisher-parts-image"><img src="assets/images/custom/fire-extinguisher-parts-reference.png" alt="Fire extinguisher parts and safety equipment"></div> -->
+                    <!-- Previous extinguisher image retained; updated reference image applied below. -->
+                    <div class="extinguisher-parts-image"><img src="assets/images/custom/fire-extinguisher-center-new.png" alt="Fire Rangers fire extinguisher"></div>
+                    <div class="extinguisher-parts-column">
+                        <article class="extinguisher-part-item right-item"><i class="fas fa-hand-paper"></i><div><h3>Fire Extinguisher Carry Handle Valve Assembly</h3><p>The handle and valve assembly controls the release of the extinguishing agent.</p></div></article>
+                        <article class="extinguisher-part-item right-item"><i class="fas fa-database"></i><div><h3>Fire Extinguisher Cylinder</h3><p>The cylinder stores the extinguishing medium under pressure for reliable response.</p></div></article>
+                        <article class="extinguisher-part-item right-item"><i class="fas fa-circle-notch"></i><div><h3>Fire Extinguisher Belt</h3><p>The belt keeps the hose and operating parts secured neatly on the extinguisher.</p></div></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- extinguisher-parts-section end -->
+
         <!-- newsletter-section hidden
         <section class="newsletter-section">
             <div class="auto-container">
@@ -590,6 +678,7 @@
         newsletter-section hidden end -->
 
 
+        <div class="old-footer-hidden">
         <!-- [old-comment-start] old footer hidden
         [old-comment-start] main-footer [old-comment-end]
         <footer class="main-footer" style="background-image: url(assets/images/background/footer-bg-1.jpg);">
@@ -708,11 +797,21 @@
                 </div>
             </div>
         </footer>
-        [old-comment-start] main-footer end [old-comment-end]
+        <!-- [old-comment-start] main-footer end [old-comment-end]
         old footer hidden end [old-comment-end] -->
+        </div>
 
         <!-- main-footer -->
-        <footer class="main-footer fire-rangers-footer-bg" style="background-image: url(assets/images/custom/fire-alarm-safety-products.png);">
+        <footer class="main-footer fire-rangers-footer-bg footer-reference-mode" style="background-image: url(assets/images/custom/fire-rangers-footer-bg.png);">
+            <!-- <figure class="footer-reference-image"><img src="assets/images/custom/fire-rangers-footer-reference.png" alt="Fire Rangers footer"></figure> -->
+            <div class="footer-recreated">
+                <div class="footer-recreated-top">
+                    <div class="footer-brand-panel"><div class="footer-brand-tag">YOUR SAFETY, OUR MISSION</div><div class="footer-values"><span><i class="fas fa-shield-alt"></i>QUALITY<br>PRODUCTS</span><span><i class="fas fa-certificate"></i>CERTIFIED<br>EQUIPMENT</span><span><i class="fas fa-tools"></i>EXPERT<br>INSTALLATION</span><span><i class="fas fa-headset"></i>24/7 SERVICE<br>SUPPORT</span></div></div>
+                    <div class="footer-recreated-links"><h3>Links</h3><a href="index.html">Home</a><a href="about.html">About</a><a href="service.html">Product</a><a href="contact.html">Contact</a></div>
+                    <div class="footer-recreated-contact"><h3>Contact Details</h3><p><i class="fas fa-phone"></i>7219475929 / 7040226178 / 9021989029</p><p><i class="far fa-envelope"></i>FERNANDESJUDITH1989@GMAIL.COM</p><p><i class="far fa-envelope"></i>SMISHRA789786@GMAIL.COM</p><p><i class="far fa-envelope"></i>hemantpandey2260@gmail.com</p><p><i class="fas fa-map-marker-alt"></i>SR.NO.134/6, SHREE RAM NAGAR, NEAR JIO TOWER</p></div>
+                </div>
+                <div class="footer-recreated-bottom"><span><i class="fas fa-fire"></i> &copy; Copyright 2026 by Fire Rangers. All Rights Reserved.</span><span class="footer-recreated-social"><a href="https://whatsapp.com/channel/0029Va7rtz5GE56oKHGg7g0a"><i class="fab fa-whatsapp"></i></a><a href="https://www.instagram.com/firerangers_"><i class="fab fa-instagram"></i></a></span></div>
+            </div>
             <figure class="footer-logo"><!-- <img src="assets/images/footer-logo.png" alt=""> -->
                 <img src="assets/images/custom/fire-rangers-logo.jpg" alt="Fire Rangers logo"></figure>
             <div class="footer-top">
