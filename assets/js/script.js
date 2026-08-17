@@ -110,6 +110,32 @@
 				message: {
 					required: true
 				}
+			},
+			submitHandler: function(form) {
+				var $status = $('#form-status');
+				var $btn = $(form).find('button[type="submit"]');
+				$status.hide();
+				$btn.prop('disabled', true);
+				$.post(
+					$(form).attr('action'),
+					$(form).serialize(),
+					function(res) {
+						if (res && (res.success === 'true' || res.success === true)) {
+							$status.removeAttr('class').addClass('fr-form-ok').text(res.message || 'Thank you! Your message has been sent successfully.');
+							form.reset();
+						} else {
+							$status.removeAttr('class').addClass('fr-form-err').text('Something went wrong. Please try again.');
+						}
+						$status.show();
+						$btn.prop('disabled', false);
+					},
+					'json'
+				).fail(function() {
+					$status.removeAttr('class').addClass('fr-form-err').text('Network error. Please try again.');
+					$status.show();
+					$btn.prop('disabled', false);
+				});
+				return false;
 			}
 		});
 	}

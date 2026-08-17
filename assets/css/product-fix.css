@@ -729,3 +729,25 @@
     display: none !important;
   }
 }
+
+/* =====================================================================
+   Contact form - FormSubmit.co status message
+   ===================================================================== */
+#form-status{
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+#form-status.fr-form-ok{
+  color: #155724;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+#form-status.fr-form-err{
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
