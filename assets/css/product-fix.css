@@ -440,7 +440,7 @@
    ===================================================================== */
 
 /* Navbar is transparent here, so drop the hero heading clear of it */
-.product-detail-page .product-details-hero{
+.product-detail-page .product-detail-hero{
   padding-top: 150px !important;
 }
 
@@ -489,9 +489,14 @@
 
 .fixed-header .sticky-header .outer-box,
 .main-header.fixed-header .outer-box{
-  height: 76px !important;
-  min-height: 76px !important;
-  overflow: hidden !important;
+  height: 82px !important;
+  min-height: 82px !important;
+  overflow: visible !important;
+}
+
+.product-detail-page .fixed-header .sticky-header .main-menu .navigation > li > a,
+.product-detail-page .main-header.fixed-header .main-menu .navigation > li > a{
+  padding: 29px 0 !important;
 }
 
 .fixed-header .sticky-header .main-menu .navigation > li,
@@ -805,4 +810,22 @@
 
 .sticky-header .main-menu .collapse:not(.show) {
   display: block !important;
+}
+
+/* =====================================================================
+   Banner heading - lighter font weight across all pages
+   ===================================================================== */
+.page-title .content-box .title h1{
+  font-weight: 400 !important;
+}
+
+.page-title .content-box .bread-crumb li{
+  font-weight: 400 !important;
+}
+
+/* Contact page - Drop us a Message heading */
+.content_block_6 .info-inner h2,
+.info-inner h2{
+  font-weight: 400 !important;
+  color: #221d1d !important;
 }

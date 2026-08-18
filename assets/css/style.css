@@ -1000,11 +1000,11 @@
 .main-header.style-two .logo-box .logo img,
 .sticky-header .logo-box .logo img,
 .mobile-menu .nav-logo img{
-  width: 100px !important;
-  height: 100px !important;
-  max-width: 100px !important;
+  width: 120px !important;
+  height: 120px !important;
+  max-width: 120px !important;
   object-fit: contain !important;
-  image-rendering: high-quality !important;
+  image-rendering: optimizeQuality !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
 }

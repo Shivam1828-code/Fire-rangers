@@ -49,14 +49,15 @@
 	});
 
 	//Mobile Nav Hide Show
-	if($('.mobile-menu').length){
-		
-		$('.mobile-menu .menu-box');
-		
-		var mobileMenuContent = $('.main-header .menu-area .main-menu').html();
+	var mobileMenuContent = $('.main-header .menu-area .main-menu').html();
+
+	if(mobileMenuContent && $('.sticky-header .main-menu').length){
+		$('.sticky-header .main-menu').html(mobileMenuContent);
+	}
+
+	if($('.mobile-menu').length && mobileMenuContent){
 		$('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
-		$('.sticky-header .main-menu').append(mobileMenuContent);
-		
+
 		//Dropdown Button
 		$('.mobile-menu li.dropdown .dropdown-btn').on('click', function() {
 			$(this).toggleClass('open');
