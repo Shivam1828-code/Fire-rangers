@@ -1,0 +1,61 @@
+#!/bin/bash
+NEW_FOOTER='        <!-- NEW FOOTER -->
+        <footer class="fire-rangers-footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-values-grid">
+                        <div class="footer-value-card"><i class="fas fa-shield-alt"></i><span>Quality<br>Products</span></div>
+                        <div class="footer-value-card"><i class="fas fa-certificate"></i><span>Certified<br>Equipment</span></div>
+                        <div class="footer-value-card"><i class="fas fa-tools"></i><span>Expert<br>Installation</span></div>
+                        <div class="footer-value-card"><i class="fas fa-headset"></i><span>24/7 Service<br>Support</span></div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Product</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="product-details.html?product=abc-portable-fire-extinguisher">Fire Extinguishers</a></li>
+                        <li><a href="product-details.html?product=fire-hydrant-amc">Fire Hydrant System</a></li>
+                        <li><a href="product-details.html?product=fire-alarm-system">Fire Alarm System</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Details</h3>
+                    <div class="footer-contact-item"><i class="fas fa-phone"></i><div><a href="tel:7219475929">7219475929</a> | <a href="tel:7040226178">7040226178</a></div></div>
+                    <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:9021989029">9021989029</a></div>
+                    <div class="footer-contact-item"><i class="far fa-envelope"></i><a href="mailto:FERNANDESJUDITH1989@GMAIL.COM">FERNANDESJUDITH1989@GMAIL.COM</a></div>
+                    <div class="footer-contact-item"><i class="far fa-envelope"></i><a href="mailto:SMISHRA789786@GMAIL.COM">SMISHRA789786@GMAIL.COM</a></div>
+                    <div class="footer-contact-item"><i class="far fa-envelope"></i><a href="mailto:hemantpandey2260@gmail.com">hemantpandey2260@gmail.com</a></div>
+                    <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p>SR.NO.134/6, SHREE RAM NAGAR, NEAR JIO TOWER</p></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-inner">
+                    <div class="footer-copyright">&copy; 2025 <a href="index.html">Fire Rangers Fire Service</a>. All Rights Reserved.</div>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/firerangers_" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Va7rtz5GE56oKHGg7g0a" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- NEW FOOTER END -->'
+
+for file in about.html service.html contact.html product-details.html; do
+    if [ -f "$file" ]; then
+        # Add CSS link if not present
+        if ! grep -q "footer-new.css" "$file"; then
+            sed -i 's|</head>|<link href="assets/css/footer-new.css" rel="stylesheet">\n</head>|' "$file"
+        fi
+        echo "Updated $file"
+    fi
+done

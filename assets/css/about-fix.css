@@ -1,0 +1,230 @@
+/* About Our Company Section - Clean White Layout */
+/* No background image - clean professional design */
+
+.history-section {
+  position: relative !important;
+  padding: 120px 0 !important;
+  min-height: 580px !important;
+  overflow: hidden !important;
+  background: #f8f8f8 !important;
+  border-radius: 0 !important;
+}
+
+/* Remove any background image styling */
+.history-bg-image {
+  display: none !important;
+}
+
+.history-reference-layout {
+  position: relative !important;
+  z-index: 2 !important;
+  display: grid !important;
+  grid-template-columns: 1.2fr 280px 1fr !important;
+  gap: 30px !important;
+  align-items: start !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+.history-reference-intro {
+  padding-right: 20px !important;
+}
+
+.history-reference-kicker {
+  display: inline-block !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: #d85b22 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 3px !important;
+  margin-bottom: 12px !important;
+}
+
+.history-reference-kicker::after {
+  content: '' !important;
+  display: block !important;
+  width: 40px !important;
+  height: 2px !important;
+  background: #d85b22 !important;
+  margin-top: 10px !important;
+}
+
+.history-reference-intro h2 {
+  font-size: 38px !important;
+  line-height: 1.15 !important;
+  font-weight: 500 !important;
+  color: #1a1a1a !important;
+  margin-bottom: 20px !important;
+}
+
+.history-reference-intro h2 strong {
+  color: #d85b22 !important;
+  font-weight: 600 !important;
+}
+
+.history-reference-intro p {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  color: #666 !important;
+  font-weight: 400 !important;
+}
+
+/* Counter Card */
+.history-reference-counter {
+  background: #ffffff !important;
+  border-radius: 20px !important;
+  padding: 36px 24px !important;
+  text-align: center !important;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.08) !important;
+}
+
+.history-reference-icon {
+  width: 70px !important;
+  height: 70px !important;
+  margin: 0 auto 14px !important;
+  border-radius: 50% !important;
+  background: #fde8e8 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.history-reference-icon i {
+  font-size: 30px !important;
+  color: #d85b22 !important;
+}
+
+.history-reference-counter strong {
+  display: block !important;
+  font-size: 48px !important;
+  font-weight: 500 !important;
+  color: #d85b22 !important;
+  margin-bottom: 4px !important;
+  line-height: 1.1 !important;
+}
+
+.history-reference-label {
+  display: block !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #333 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  margin-bottom: 12px !important;
+}
+
+.history-reference-rule {
+  display: block !important;
+  width: 35px !important;
+  height: 2px !important;
+  background: #d85b22 !important;
+  margin: 0 auto 14px !important;
+}
+
+.history-reference-counter p {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #666 !important;
+  font-weight: 400 !important;
+}
+
+/* Benefits List */
+.history-reference-benefits {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.history-benefit {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 14px !important;
+}
+
+.history-benefit-icon {
+  flex-shrink: 0 !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background: #d85b22 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.history-benefit-icon i {
+  font-size: 18px !important;
+  color: #ffffff !important;
+}
+
+.history-benefit h4 {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #1a1a1a !important;
+  margin-bottom: 4px !important;
+  line-height: 1.3 !important;
+}
+
+.history-benefit p {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #666 !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .history-reference-layout {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    padding: 0 !important;
+  }
+  
+  .history-reference-intro {
+    padding-right: 0 !important;
+  }
+  
+  .history-reference-kicker::after {
+    margin: 10px auto 0 !important;
+  }
+  
+  .history-reference-counter {
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+  
+  .history-reference-benefits {
+    max-width: 450px !important;
+    margin: 0 auto !important;
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .history-reference-intro h2 {
+    font-size: 28px !important;
+  }
+  
+  .history-reference-counter strong {
+    font-size: 40px !important;
+  }
+  
+  .history-section {
+    padding: 50px 0 !important;
+    min-height: auto !important;
+  }
+}
+
+/* About Feature Section - Lighter font weights */
+.about-feature-content h2 {
+  font-weight: 400 !important;
+}
+
+.about-feature-content h2 strong {
+  font-weight: 400 !important;
+}
+
+.about-feature-stat strong {
+  font-weight: 400 !important;
+}

@@ -40,6 +40,14 @@
 		
 	}
 
+	// Product Menu Hover Fix - works for both normal and sticky headers
+	// Using event delegation to handle dynamically added content
+	$(document).on('mouseenter', '.fire-rangers-products-menu', function(){
+		$(this).find('.product-megamenu').addClass('show-menu');
+	}).on('mouseleave', '.fire-rangers-products-menu', function(){
+		$(this).find('.product-megamenu').removeClass('show-menu');
+	});
+
 	//Mobile Nav Hide Show
 	if($('.mobile-menu').length){
 		
@@ -578,9 +586,46 @@
 	$(window).on('load', function() {
 		handlePreloader();
 		enableMasonry();
-		expertizeRoundCircle ();
+		expertizeRoundCircle();
+		
+		// Initialize WOW.js for scroll animations
+		if (typeof WOW !== 'undefined') {
+			new WOW().init();
+		}
+		
+		// Initialize counter animation
+		if ($.fn.countTo) {
+			$('.count-text').each(function() {
+				var $this = $(this);
+				var stop = parseInt($this.attr('data-stop')) || 0;
+				var speed = parseInt($this.attr('data-speed')) || 1500;
+				$({ count: 0 }).animate({ count: stop }, {
+					duration: speed,
+					easing: 'swing',
+					step: function() {
+						$this.text(Math.floor(this.count));
+					},
+					complete: function() {
+						$this.text(stop);
+					}
+				});
+			});
+		}
 	});
 
 	
 
 })(window.jQuery);
+// Sticky header mega menu hover fix
+$(window).on('scroll', function() {
+    if ($('.sticky-header').hasClass('fixed-header')) {
+        // Ensure mega menu hover works on sticky header
+        $('.sticky-header .fire-rangers-products-menu').off('mouseenter mouseleave')
+            .on('mouseenter', function() {
+                $(this).find('.product-megamenu').addClass('show-menu');
+            })
+            .on('mouseleave', function() {
+                $(this).find('.product-megamenu').removeClass('show-menu');
+            });
+    }
+});

@@ -4,30 +4,76 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
 <title>Fire Rangers - Product Details</title>
-
-<link rel="icon" href="assets/images/custom/fire-rangers-logo.webp" type="image/x-icon">
+<link rel="icon" href="assets/images/custom/fire-rangers-logo-new.png" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 <link href="assets/css/font-awesome-all.css" rel="stylesheet">
 <link href="assets/css/flaticon.css" rel="stylesheet">
+<link href="assets/css/owl.css" rel="stylesheet">
 <link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/animate.css" rel="stylesheet">
 <link href="assets/css/color.css" rel="stylesheet">
-<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/style.css?v=20" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
 <link href="assets/css/product-fix.css" rel="stylesheet">
+<link href="assets/css/footer-new.css" rel="stylesheet">
+<style>
+/* Product Details Page Styles */
+.product-detail-hero{padding:90px 0 50px;background:#f7f3f2;}
+.product-detail-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+.product-details-title h1{font-size:clamp(32px,4vw,48px);font-weight:400;line-height:1.15;color:#171414;margin-bottom:16px;}
+.product-details-title span{color:#d85b22;font-size:16px;font-weight:500;text-transform:uppercase;}
+.product-details-title p{font-size:17px;line-height:1.65;color:#5f5b5b;margin:0;}
+.product-details-image{text-align:center;}
+.product-details-image img{max-width:100%;max-height:420px;object-fit:contain;}
+.product-detail-content{padding:60px 0 80px;background:#fff;}
+.product-detail-two-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1200px;margin:0 auto;}
+.product-detail-panel{padding:32px;border:1px solid #eee6e2;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,0.06);}
+.product-detail-panel h3{font-size:22px;font-weight:500;color:#171414;margin-bottom:20px;}
+.product-detail-panel table{width:100%;}
+.product-detail-panel th,.product-detail-panel td{padding:12px 16px;border:1px solid #eee6e2;font-size:15px;color:#5f5b5b;}
+.product-detail-panel th{width:40%;color:#171414;font-weight:500;background:#fff7f3;}
+.back-link{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;color:#d85b22;font-size:15px;font-weight:500;text-transform:uppercase;text-decoration:none;}
+.back-link:hover{color:#c44e1a;}
+@media(max-width:767px){
+.product-detail-hero-grid,.product-detail-two-grid{grid-template-columns:1fr;}
+}
+</style>
 </head>
-
 <body>
-    <div class="boxed_wrapper product-detail-page">
+<div class="boxed_wrapper product-detail-page">
+    <!-- main header -->
         <header class="main-header">
+            <div class="header-top">
+                <!-- header-top -->
+                <div class="auto-container">
+                    <div class="top-inner clearfix">
+                        <div class="text pull-left"><p>Complete fire safety solutions for commercial and industrial sites</p></div>
+                        <div class="top-right pull-right">
+                            <ul class="social-links clearfix">
+                                <!-- old social media hidden <ul class="social-links clearfix">
+                                <li><a href="index.html"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="index.html"><i class="fab fa-pinterest-p"></i></a></li>
+                                <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
+                            </ul> -->
+                                <li><a href="https://whatsapp.com/channel/0029Va7rtz5GE56oKHGg7g0a" target="_blank" rel="noopener noreferrer" aria-label="Fire Rangers WhatsApp Channel"><i class="fab fa-whatsapp"></i></a></li>
+                                <li><a href="https://www.instagram.com/firerangers_" target="_blank" rel="noopener noreferrer" aria-label="Fire Rangers Instagram"><i class="fab fa-instagram"></i></a></li>                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- header-lower -->
             <div class="header-lower">
                 <div class="auto-container">
                     <div class="outer-box clearfix">
                         <div class="logo-box pull-left">
-                            <figure class="logo"><a href="index.html"><img src="assets/images/custom/fire-rangers-logo.webp" alt="Fire Rangers logo"></a></figure>
+                            <figure class="logo"><a href="index.html"><!-- <img src="assets/images/logo-2.webp" alt=""> -->
+                    <img src="assets/images/custom/fire-rangers-logo-new.png" alt="Fire Rangers logo"></a></figure>
                         </div>
                         <div class="menu-area pull-left">
+                            <!--Mobile Navigation Toggler-->
                             <div class="mobile-nav-toggler">
                                 <i class="icon-bar"></i>
                                 <i class="icon-bar"></i>
@@ -35,13 +81,140 @@
                             </div>
                             <nav class="main-menu navbar-expand-md navbar-light">
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                    <ul class="navigation clearfix">
+                                                                        <ul class="navigation clearfix">
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="about.html">About</a></li>
-                                        <li class="current"><a href="service.html">Product</a></li>
+                                        <li class="dropdown fire-rangers-products-menu"><a href="service.html">Product</a>
+                                            <div class="megamenu product-megamenu">
+                                                <div class="row clearfix">
+                                                    <div class="col-lg-3 column product-menu-card">
+                                                        <h4><a href="service.html#fire-extinguishers"><i class="fas fa-fire-extinguisher"></i>Fire Extinguishers</a></h4>
+                                                        <ul>
+                                                            <li><a href="product-details.html?product=abc-portable-fire-extinguisher">ABC</a></li>
+                                                            <li><a href="product-details.html?product=co2-portable-fire-extinguisher">CO2</a></li>
+                                                            <li><a href="product-details.html?product=mechanical-foam-fire-extinguisher">Mechanical Foam</a></li>
+                                                            <li><a href="product-details.html?product=water-fire-extinguisher">Water CO2</a></li>
+                                                            <li><a href="product-details.html?product=k-type-kitchen-fire-extinguisher">K Type</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 column product-menu-card">
+                                                        <h4><a href="service.html#hydrant-amc"><i class="fas fa-tint"></i>Fire Hydrant System</a></h4>
+                                                        <ul>
+                                                            <li><a href="product-details.html?product=fire-hydrant-amc">AMC</a></li>
+                                                            <li><a href="product-details.html?product=sprinkler-system">Sprinkler System</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 column product-menu-card">
+                                                        <h4><a href="service.html#fire-alarm-system"><i class="fas fa-bell"></i>Fire Alarm System</a></h4>
+                                                        <ul>
+                                                            <li><a href="product-details.html?product=fire-alarm-system">AMC</a></li>
+                                                            <li><a href="product-details.html?product=smoke-detector">Smoke Detector</a></li>
+                                                            <li><a href="product-details.html?product=heat-detector">Heat Detector</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
+                                    <!-- old full navbar hidden
+<ul class="navigation clearfix">
+                                        <li class="current"><a href="index.html">Home</a>
+                                            <ul>
+                                                [old-comment-start] <li><a href="index.html">Home Page 01</a></li> [old-comment-end]
+                                                [old-comment-start] <li><a href="index.html">Home Page 02</a></li> [old-comment-end]
+                                                [old-comment-start] <li><a href="index-onepage.html">OnePage Home</a></li> [old-comment-end]
+                                                [old-comment-start] <li><a href="index-rtl.html">RTL Home</a></li> [old-comment-end]
+                                                [old-comment-start] <li class="dropdown"><a href="index.html">Header Style</a>
+                                                    <ul>
+                                                        <li><a href="index.html">Header Style 01</a></li>
+                                                        <li><a href="index.html">Header Style 02</a></li>
+                                                    </ul>
+                                                </li> [old-comment-end]
+                                            </ul>
+                                        </li> 
+                                        <li class="dropdown"><a href="index.html">Pages</a>
+                                            <ul>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="team.html">Service & Safety Experts</a></li>
+                                                <li><a href="gallery.html">Our Gallery</a></li>
+                                                <li><a href="contact.html">Contact Us</a></li>
+                                                <li><a href="error.html">404</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="index.html">Services</a>
+                                            <ul>
+                                                <li><a href="service.html">Our Services</a></li>
+                                                <li><a href="service-details.html">Fire Extinguishers</a></li>
+                                                <li><a href="service-details-2.html">Hydrant Systems</a></li>
+                                                <li><a href="service-details-3.html">Fire Suppression</a></li>
+                                                <li><a href="service-details-4.html">Fire Alarm Systems</a></li>
+                                                <li><a href="service-details-5.html">Safety Products</a></li>
+                                                <li><a href="service-details-6.html">Certificates & AMC</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="index.html">Elements</a>
+                                            <div class="megamenu">
+                                                <div class="row clearfix">
+                                                    <div class="col-lg-6 column">
+                                                        <ul>
+                                                            <li><h4>Elements 1</h4></li>
+                                                            <li><a href="about-element-1.html">About Block 01</a></li>
+                                                            <li><a href="about-element-2.html">About Block 02</a></li>
+                                                            <li><a href="service-element-1.html">Service Block 01</a></li>
+                                                            <li><a href="service-element-2.html">Service Block 02</a></li>
+                                                            <li><a href="team-element-1.html">Team Block 01</a></li>
+                                                            <li><a href="team-element-2.html">Team Block 02</a></li>
+                                                            <li><a href="news-element-1.html">News Block 01</a></li>
+                                                            <li><a href="news-element-2.html">News Block 02</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-6 column">
+                                                        <ul>
+                                                            <li><h4>Elements 2</h4></li>
+                                                            <li><a href="skrills-element.html">Skrills Block</a></li>
+                                                            <li><a href="project-element.html">Project Block</a></li>
+                                                            <li><a href="video-element.html">Video Block</a></li>
+                                                            <li><a href="testimonial-element.html">Testimonial Block</a></li>
+                                                            <li><a href="clients-element.html">Clients Block</a></li>
+                                                            <li><a href="feature-element.html">Feature Block</a></li>
+                                                            <li><a href="cta-element.html">CTA Block</a></li>
+                                                        </ul>
+                                                    </div>                                    
+                                                </div>                                        
+                                            </div>
+                                        </li>   
+                                        <li class="dropdown"><a href="index.html">Latest News</a>
+                                            <ul>
+                                                <li><a href="blog.html">Blog Grid</a></li>
+                                                <li><a href="blog-2.html">Blog Standard</a></li>
+                                                <li><a>Blog Details</a></li>
+                                            </ul>
+                                        </li>    
+                                    </ul>
+                                    old full navbar hidden end -->
                                 </div>
+                            </nav>
+                        </div>
+                        <div class="support-box pull-right">
+                            <i class="flaticon-call"></i>
+                            <p>Contact Details</p>
+                            <h4><a href="tel:7219475929">7219475929</a></h4>
+                        </div>
+                    </div>
+                </div>            </div>
+
+            <!--sticky Header-->
+            <div class="sticky-header">
+                <div class="auto-container">
+                    <div class="outer-box clearfix">
+                        <div class="logo-box pull-left">
+                            <figure class="logo"><a href="index.html"><!-- <img src="assets/images/logo.webp" alt=""> -->
+                                <img src="assets/images/custom/fire-rangers-logo-new.png" alt="Fire Rangers logo"></a></figure>
+                        </div>
+                        <div class="menu-area pull-left">
+                            <nav class="main-menu clearfix">
+                                <!--Keep This Empty / Menu will come through Javascript-->
                             </nav>
                         </div>
                         <div class="support-box pull-right">
@@ -54,154 +227,137 @@
             </div>
         </header>
 
-<section class="product-details-hero">
-            <div class="auto-container">
+    <section class="product-detail-hero">
+        <div class="auto-container">
+            <div class="product-detail-hero-grid">
                 <div class="product-details-title">
+                    <a href="service.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Products</a>
                     <h1 id="detailTitle">Product Details</h1>
                     <p id="detailIntro">Fire Rangers provides dependable fire safety products, installation and AMC support.</p>
                 </div>
-            </div>
-        </section>
-
-        <section class="product-detail-content">
-            <div class="auto-container">
-                <div class="product-detail-two-grid">
-                    <article class="product-detail-panel">
-                        <h3>Product Specifications</h3>
-                        <table class="product-detail-table product-main-spec-table">
-                            <tbody id="mainSpecRows"></tbody>
-                        </table>
-                    </article>
-                    <article class="product-detail-panel">
-                        <h3>Technical Specifications</h3>
-                        <table class="product-detail-table">
-                            <tbody id="technicalSpecRows"></tbody>
-                        </table>
-                    </article>
+                <div class="product-details-image">
+                    <img id="detailImage" src="assets/images/custom/products/abc-portable-fire-extinguisher-new.webp" alt="Product Image">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer class="main-footer fire-rangers-footer-bg no-footer-image footer-reference-mode" style="background-image: url(assets/images/custom/fire-rangers-footer-bg.webp);">
-            <div class="footer-recreated">
-                <div class="footer-recreated-top">
-                    <div class="footer-brand-panel"><div class="footer-brand-tag">YOUR SAFETY, OUR MISSION</div><div class="footer-values"><span><i class="fas fa-shield-alt"></i>QUALITY<br>PRODUCTS</span><span><i class="fas fa-certificate"></i>CERTIFIED<br>EQUIPMENT</span><span><i class="fas fa-tools"></i>EXPERT<br>INSTALLATION</span><span><i class="fas fa-headset"></i>24/7 SERVICE<br>SUPPORT</span></div></div>
-                    <div class="footer-recreated-links"><h3>Links</h3><a href="index.html">Home</a><a href="about.html">About</a><a href="service.html">Product</a><a href="contact.html">Contact</a></div>
-                    <div class="footer-recreated-contact"><h3>Contact Details</h3><div class="footer-phone-row"><span><i class="fas fa-phone"></i> 7219475929</span><span><i class="fas fa-phone"></i> 7040226178</span><span><i class="fas fa-phone"></i> 9021989029</span></div><p><i class="far fa-envelope"></i>FERNANDESJUDITH1989@GMAIL.COM</p><p><i class="far fa-envelope"></i>SMISHRA789786@GMAIL.COM</p><p><i class="far fa-envelope"></i>hemantpandey2260@gmail.com</p><p><i class="fas fa-map-marker-alt"></i>SR.NO.134/6, SHREE RAM NAGAR, NEAR JIO TOWER</p></div>
-                </div>
-                <div class="footer-recreated-bottom"><span><i class="fas fa-fire"></i> &copy; Copyright 2026 by Fire Rangers. All Rights Reserved.</span><span class="footer-recreated-social"><a href="https://whatsapp.com/channel/0029Va7rtz5GE56oKHGg7g0a"><i class="fab fa-whatsapp"></i></a><a href="https://www.instagram.com/firerangers_"><i class="fab fa-instagram"></i></a></span></div>
+    <section class="product-detail-content">
+        <div class="auto-container">
+            <div class="product-detail-two-grid">
+                <article class="product-detail-panel">
+                    <h3>Product Specifications</h3>
+                    <table class="product-detail-table product-main-spec-table">
+                        <tbody id="mainSpecRows"></tbody>
+                    </table>
+                </article>
+                <article class="product-detail-panel">
+                    <h3>Technical Specifications</h3>
+                    <table class="product-detail-table">
+                        <tbody id="technicalSpecRows"></tbody>
+                    </table>
+                </article>
             </div>
-        </footer>
+        </div>
+    </section>
 
-        <button class="scroll-top scroll-to-target" data-target="html">
-            <span class="fa fa-arrow-up"></span>
-        </button>
-    </div>
+    <!-- NEW FOOTER -->
+    <footer class="fire-rangers-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-values-grid">
+                    <div class="footer-value-card"><i class="fas fa-shield-alt"></i><span>Quality<br>Products</span></div>
+                    <div class="footer-value-card"><i class="fas fa-certificate"></i><span>Certified<br>Equipment</span></div>
+                    <div class="footer-value-card"><i class="fas fa-tools"></i><span>Expert<br>Installation</span></div>
+                    <div class="footer-value-card"><i class="fas fa-headset"></i><span>24/7 Service<br>Support</span></div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Product</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="product-details.html?product=abc-portable-fire-extinguisher">Fire Extinguishers</a></li>
+                    <li><a href="product-details.html?product=fire-hydrant-amc">Fire Hydrant System</a></li>
+                    <li><a href="product-details.html?product=fire-alarm-system">Fire Alarm System</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Details</h3>
+                <div class="footer-contact-item"><i class="fas fa-phone"></i><div><a href="tel:7219475929">7219475929</a> | <a href="tel:7040226178">7040226178</a></div></div>
+                <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:9021989029">9021989029</a></div>
+                <div class="footer-contact-item"><i class="far fa-envelope"></i><a href="mailto:FERNANDESJUDITH1989@GMAIL.COM">FERNANDESJUDITH1989@GMAIL.COM</a></div>
+                <div class="footer-contact-item"><i class="far fa-envelope"></i><a href="mailto:SMISHRA789786@GMAIL.COM">SMISHRA789786@GMAIL.COM</a></div>
+                <div class="footer-contact-item"><i class="far fa-envelope"></i><a href="mailto:hemantpandey2260@gmail.com">hemantpandey2260@gmail.com</a></div>
+                <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p>SR.NO.134/6, SHREE RAM NAGAR, NEAR JIO TOWER</p></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <div class="footer-copyright">&copy; 2025 <a href="index.html">Fire Rangers Fire Service</a>. All Rights Reserved.</div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/firerangers_" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://whatsapp.com/channel/0029Va7rtz5GE56oKHGg7g0a" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- NEW FOOTER END -->
 
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script>
-        (function () {
-            var products = {
-                "abc-portable-fire-extinguisher": {
-                    title: "ABC Portable Fire Extinguisher",
-                    category: "ABC Fire Extinguishers",
-                    intro: "ABC Portable Fire Extinguishers are ideal for Class A/B/C fires and available for new supply, refilling and AMC support.",
-                    image: "assets/images/custom/products/abc-portable-fire-extinguisher-new.webp",
-                    specs: [["Capacity (KG)", "1, 2, 4, 6, 9"], ["Cylinder Material", "M.S."], ["Extinguishing Medium", "ABC Dry Powder"], ["Operating Pressure", "15 BAR"], ["Test Pressure", "35 BAR"], ["Propellant", "Nitrogen"]],
-                    technical: [["Product Type", "ABC Portable Fire Extinguisher"], ["Category", "ABC Fire Extinguishers"], ["Extinguishing Medium", "ABC Dry Powder"], ["Available Capacities", "1,2,4,6,9 KG"], ["Fire Class", "A/B/C"], ["Form Factor", "Portable"], ["Recommended Use", "Commercial & Residential"], ["Variant", "Stored Pressure"]]
-                },
-                "co2-portable-fire-extinguisher": {
-                    title: "CO2 Portable Fire Extinguisher",
-                    category: "CO2 Fire Extinguishers",
-                    intro: "CO2 fire extinguishers are clean, non-conductive and suitable for electrical and flammable liquid fire risks.",
-                    image: "assets/images/custom/products/co2-portable-fire-extinguisher-new.webp",
-                    specs: [["Capacity (KG)", "1, 2, 3, 4, 5"], ["Cylinder Material", "M.S."], ["Extinguishing Medium", "Carbon Dioxide"], ["Operating Pressure", "High Pressure CO2"], ["Fire Class", "B/C"], ["Service", "New Supply / Refilling / AMC"]],
-                    technical: [["Product Type", "CO2 Portable Fire Extinguisher"], ["Category", "CO2 Fire Extinguishers"], ["Extinguishing Medium", "CO2 Gas"], ["Available Capacities", "1,2,3,4,5 KG"], ["Fire Class", "B/C"], ["Form Factor", "Portable"], ["Recommended Use", "Electrical Rooms and Offices"], ["Variant", "Stored Pressure"]]
-                },
-                "mechanical-foam-fire-extinguisher": {
-                    title: "Mechanical Foam Fire Extinguisher",
-                    category: "Mechanical Foam",
-                    intro: "Mechanical foam extinguishers help control Class A and B fires by forming a cooling foam blanket.",
-                    image: "assets/images/custom/products/mechanical-foam-fire-extinguisher-new.webp",
-                    specs: [["Capacity", "6, 9 L"], ["Cylinder Material", "M.S."], ["Extinguishing Medium", "Mechanical Foam"], ["Fire Class", "A/B"], ["Type", "Portable"], ["Service", "New Supply / Refilling / AMC"]],
-                    technical: [["Product Type", "Mechanical Foam Fire Extinguisher"], ["Category", "Mechanical Foam"], ["Extinguishing Medium", "Foam"], ["Available Capacities", "6,9 L"], ["Fire Class", "A/B"], ["Form Factor", "Portable"], ["Recommended Use", "Commercial and Industrial"], ["Variant", "Stored Pressure"]]
-                },
-                "water-fire-extinguisher": {
-                    title: "Water Fire Extinguisher",
-                    category: "Water Fire Extinguishers",
-                    intro: "Water fire extinguishers are designed for Class A fires involving wood, paper, cloth and ordinary combustible materials.",
-                    image: "assets/images/custom/products/water-fire-extinguisher-new.webp",
-                    specs: [["Capacity", "6, 9 L"], ["Cylinder Material", "M.S."], ["Extinguishing Medium", "Water"], ["Fire Class", "A"], ["Type", "Portable"], ["Service", "New Supply / Refilling / AMC"]],
-                    technical: [["Product Type", "Water Fire Extinguisher"], ["Category", "Water"], ["Extinguishing Medium", "Water"], ["Available Capacities", "6,9 L"], ["Fire Class", "A"], ["Form Factor", "Portable"], ["Recommended Use", "Homes, Offices and Commercial Spaces"], ["Variant", "Stored Pressure"]]
-                },
-                "k-type-kitchen-fire-extinguisher": {
-                    title: "K-Type Kitchen Fire Extinguisher",
-                    category: "Kitchen Fire Extinguishers",
-                    intro: "K-Type kitchen fire extinguishers are designed for cooking oil and fat fire risks in commercial kitchens.",
-                    image: "assets/images/custom/products/k-type-kitchen-fire-extinguisher-new.webp",
-                    specs: [["Capacity", "1, 2, 4, 6, 9 L"], ["Cylinder Material", "SS / MS"], ["Extinguishing Medium", "Wet Chemical"], ["Fire Class", "K/F"], ["Type", "Portable"], ["Service", "New Supply / Refilling / AMC"]],
-                    technical: [["Product Type", "K-Type Kitchen Fire Extinguisher"], ["Category", "Kitchen Fire Extinguishers"], ["Extinguishing Medium", "Wet Chemical"], ["Available Capacities", "1,2,4,6,9 L"], ["Fire Class", "K/F"], ["Form Factor", "Portable"], ["Recommended Use", "Commercial Kitchens"], ["Variant", "Stored Pressure"]]
-                },
-                "fire-hydrant-amc": {
-                    title: "AMC",
-                    category: "Fire Hydrant System",
-                    intro: "Comprehensive annual maintenance contract for fire hydrant and sprinkler systems to ensure reliability, safety and compliance.",
-                    image: "assets/images/custom/products/fire-hydrant-amc.webp",
-                    specs: [["Service", "AMC"], ["System", "Fire Hydrant System"], ["Coverage", "Inspection, Testing and Maintenance"], ["Support", "Preventive Maintenance"], ["Recommended Use", "Commercial and Industrial Sites"], ["Compliance", "Safety and Regulatory Support"]],
-                    technical: [["Product Type", "Fire Hydrant AMC"], ["Category", "Fire Hydrant System"], ["Service Type", "Annual Maintenance Contract"], ["Covered System", "Hydrant and Sprinkler System"], ["Recommended Use", "Reliability and Compliance"], ["Variant", "AMC Support"]]
-                },
-                "sprinkler-system": {
-                    title: "Sprinkler System",
-                    category: "Fire Hydrant System",
-                    intro: "Sprinkler systems are designed to detect and control fire at an early stage by automatically releasing water.",
-                    image: "assets/images/custom/products/fire-sprinkler-system.webp",
-                    specs: [["Service", "New Connection / AMC"], ["System", "Sprinkler System"], ["Function", "Automatic Water Discharge"], ["Use", "Life and Property Protection"], ["Maintenance", "Inspection and Testing"], ["Compliance", "Fire Safety Standards"]],
-                    technical: [["Product Type", "Sprinkler System"], ["Category", "Fire Hydrant System"], ["Medium", "Water Discharge"], ["Form Factor", "Pipeline System"], ["Recommended Use", "Commercial, Industrial and Residential"], ["Variant", "Automatic Fire Protection"]]
-                },
-                "fire-alarm-system": {
-                    title: "Fire Alarm System",
-                    category: "Fire Alarm System",
-                    intro: "Fire alarm system support includes AMC, new connection, smoke detector and heat detector service.",
-                    image: "assets/images/custom/fire-alarm-safety-products.webp",
-                    specs: [["Service", "AMC / New Connection"], ["System", "Fire Alarm System"], ["Included", "Smoke Detector and Heat Detector"], ["Use", "Detection and Alert"], ["Support", "Testing and Maintenance"], ["Recommended Use", "Buildings and Industrial Sites"]],
-                    technical: [["Product Type", "Fire Alarm System"], ["Category", "Fire Detection Systems"], ["Medium", "Alarm Detection"], ["Available Capacities", "Complete System"], ["Form Factor", "Wall and Ceiling Mounted"], ["Recommended Use", "Fire Alarm Detection"], ["Variant", "AMC and New Connection"]]
-                },
-                "smoke-detector": {
-                    title: "Smoke Detector",
-                    category: "Fire Alarm System",
-                    intro: "Smoke detectors provide early fire warning by sensing smoke particles and triggering the alarm system.",
-                    image: "assets/images/custom/products/smoke-detector.webp",
-                    specs: [["Capacity", "Single Unit"], ["Type", "Ceiling Mounted"], ["Service", "New Supply / AMC"], ["Medium", "Smoke Detection"], ["Use", "Early Warning"], ["System", "Fire Alarm Detection"]],
-                    technical: [["Product Type", "Smoke Detector"], ["Category", "Fire Detection Systems"], ["Medium", "Smoke Detection"], ["Available Capacities", "Single Unit"], ["Fire Class", "A, B, C"], ["Form Factor", "Ceiling Mounted"], ["Recommended Use", "Fire Alarm Detection"], ["Variant", "Smoke Detector"]]
-                },
-                "heat-detector": {
-                    title: "Heat Detector",
-                    category: "Fire Alarm System",
-                    intro: "Heat Detector is suitable where temperature rise is the primary indication of fire.",
-                    image: "assets/images/custom/products/heat-detector.webp",
-                    specs: [["Capacity", "Single Unit"], ["Type", "Wall Mounted"], ["Service", "New Supply / AMC"], ["Medium", "Heat Detection"], ["Use", "Fire Alarm Detection"], ["Configuration", "Fixed Temperature / Rate of Rise"]],
-                    technical: [["Product Type", "Heat Detector"], ["Category", "Fire Detection Systems"], ["Medium", "Heat Detection"], ["Available Capacities", "Single Unit"], ["Fire Class", "A, B, C*"], ["Form Factor", "Ceiling Mounted"], ["Recommended Use", "Fire Alarm Detection"], ["Variant", "Heat Detector"]]
-                }
-            };
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="fa fa-arrow-up"></span>
+    </button>
+</div>
 
-            function rows(data) {
-                return data.map(function (row) {
-                    return "<tr><th>" + row[0] + "</th><td>" + row[1] + "</td></tr>";
-                }).join("");
-            }
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/owl.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/jquery.countTo.js"></script>
+<script src="assets/js/script.js"></script>
+<script>
+(function () {
+    var products = {
+        "abc-portable-fire-extinguisher": {title:"ABC Portable Fire Extinguisher",category:"ABC Fire Extinguishers",intro:"ABC Portable Fire Extinguishers are ideal for Class A/B/C fires and available for new supply, refilling and AMC support.",image:"assets/images/custom/products/abc-portable-fire-extinguisher-new.webp",specs:[["Capacity (KG)","1, 2, 4, 6, 9"],["Cylinder Material","M.S."],["Extinguishing Medium","ABC Dry Powder"],["Operating Pressure","15 BAR"],["Test Pressure","35 BAR"],["Propellant","Nitrogen"]],technical:[["Product Type","ABC Portable Fire Extinguisher"],["Category","ABC Fire Extinguishers"],["Extinguishing Medium","ABC Dry Powder"],["Available Capacities","1,2,4,6,9 KG"],["Fire Class","A/B/C"],["Form Factor","Portable"],["Recommended Use","Commercial & Residential"],["Variant","Stored Pressure"]]},
+        "co2-portable-fire-extinguisher": {title:"CO2 Portable Fire Extinguisher",category:"CO2 Fire Extinguishers",intro:"CO2 fire extinguishers are clean, non-conductive and suitable for electrical and flammable liquid fire risks.",image:"assets/images/custom/products/co2-portable-fire-extinguisher-new.webp",specs:[["Capacity (KG)","1, 2, 3, 4, 5"],["Cylinder Material","M.S."],["Extinguishing Medium","Carbon Dioxide"],["Operating Pressure","High Pressure CO2"],["Fire Class","B/C"],["Service","New Supply / Refilling / AMC"]],technical:[["Product Type","CO2 Portable Fire Extinguisher"],["Category","CO2 Fire Extinguishers"],["Extinguishing Medium","CO2 Gas"],["Available Capacities","1,2,3,4,5 KG"],["Fire Class","B/C"],["Form Factor","Portable"],["Recommended Use","Electrical Rooms and Offices"],["Variant","Stored Pressure"]]},
+        "mechanical-foam-fire-extinguisher": {title:"Mechanical Foam Fire Extinguisher",category:"Mechanical Foam",intro:"Mechanical foam extinguishers help control Class A and B fires by forming a cooling foam blanket.",image:"assets/images/custom/products/mechanical-foam-fire-extinguisher-new.webp",specs:[["Capacity","6, 9 L"],["Cylinder Material","M.S."],["Extinguishing Medium","Mechanical Foam"],["Fire Class","A/B"],["Type","Portable"],["Service","New Supply / Refilling / AMC"]],technical:[["Product Type","Mechanical Foam Fire Extinguisher"],["Category","Mechanical Foam"],["Extinguishing Medium","Foam"],["Available Capacities","6,9 L"],["Fire Class","A/B"],["Form Factor","Portable"],["Recommended Use","Commercial and Industrial"],["Variant","Stored Pressure"]]},
+        "water-fire-extinguisher": {title:"Water Fire Extinguisher",category:"Water Fire Extinguishers",intro:"Water fire extinguishers are designed for Class A fires involving wood, paper, cloth and ordinary combustible materials.",image:"assets/images/custom/products/water-fire-extinguisher-new.webp",specs:[["Capacity","6, 9 L"],["Cylinder Material","M.S."],["Extinguishing Medium","Water"],["Fire Class","A"],["Type","Portable"],["Service","New Supply / Refilling / AMC"]],technical:[["Product Type","Water Fire Extinguisher"],["Category","Water"],["Extinguishing Medium","Water"],["Available Capacities","6,9 L"],["Fire Class","A"],["Form Factor","Portable"],["Recommended Use","Homes, Offices and Commercial Spaces"],["Variant","Stored Pressure"]]},
+        "k-type-kitchen-fire-extinguisher": {title:"K-Type Kitchen Fire Extinguisher",category:"Kitchen Fire Extinguishers",intro:"K-Type kitchen fire extinguishers are designed for cooking oil and fat fire risks in commercial kitchens.",image:"assets/images/custom/products/k-type-kitchen-fire-extinguisher-new.webp",specs:[["Capacity","1, 2, 4, 6, 9 L"],["Cylinder Material","SS / MS"],["Extinguishing Medium","Wet Chemical"],["Fire Class","K/F"],["Type","Portable"],["Service","New Supply / Refilling / AMC"]],technical:[["Product Type","K-Type Kitchen Fire Extinguisher"],["Category","Kitchen Fire Extinguishers"],["Extinguishing Medium","Wet Chemical"],["Available Capacities","1,2,4,6,9 L"],["Fire Class","K/F"],["Form Factor","Portable"],["Recommended Use","Commercial Kitchens"],["Variant","Stored Pressure"]]},
+        "fire-hydrant-amc": {title:"AMC",category:"Fire Hydrant System",intro:"Comprehensive annual maintenance contract for fire hydrant and sprinkler systems to ensure reliability, safety and compliance.",image:"assets/images/custom/products/fire-hydrant-amc.webp",specs:[["Service","AMC"],["System","Fire Hydrant System"],["Coverage","Inspection, Testing and Maintenance"],["Support","Preventive Maintenance"],["Recommended Use","Commercial and Industrial Sites"],["Compliance","Safety and Regulatory Support"]],technical:[["Product Type","Fire Hydrant AMC"],["Category","Fire Hydrant System"],["Service Type","Annual Maintenance Contract"],["Covered System","Hydrant and Sprinkler System"],["Recommended Use","Reliability and Compliance"],["Variant","AMC Support"]]},
+        "sprinkler-system": {title:"Sprinkler System",category:"Fire Hydrant System",intro:"Sprinkler systems are designed to detect and control fire at an early stage by automatically releasing water.",image:"assets/images/custom/products/fire-sprinkler-system.webp",specs:[["Service","New Connection / AMC"],["System","Sprinkler System"],["Function","Automatic Water Discharge"],["Use","Life and Property Protection"],["Maintenance","Inspection and Testing"],["Compliance","Fire Safety Standards"]],technical:[["Product Type","Sprinkler System"],["Category","Fire Hydrant System"],["Medium","Water Discharge"],["Form Factor","Pipeline System"],["Recommended Use","Commercial, Industrial and Residential"],["Variant","Automatic Fire Protection"]]},
+        "fire-alarm-system": {title:"Fire Alarm System",category:"Fire Alarm System",intro:"Fire alarm system support includes AMC, new connection, smoke detector and heat detector service.",image:"assets/images/custom/fire-alarm-safety-products.webp",specs:[["Service","AMC / New Connection"],["System","Fire Alarm System"],["Included","Smoke Detector and Heat Detector"],["Use","Detection and Alert"],["Support","Testing and Maintenance"],["Recommended Use","Buildings and Industrial Sites"]],technical:[["Product Type","Fire Alarm System"],["Category","Fire Detection Systems"],["Medium","Alarm Detection"],["Available Capacities","Complete System"],["Form Factor","Wall and Ceiling Mounted"],["Recommended Use","Fire Alarm Detection"],["Variant","AMC and New Connection"]]},
+        "smoke-detector": {title:"Smoke Detector",category:"Fire Alarm System",intro:"Smoke detectors provide early fire warning by sensing smoke particles and triggering the alarm system.",image:"assets/images/custom/products/smoke-detector.webp",specs:[["Capacity","Single Unit"],["Type","Ceiling Mounted"],["Service","New Supply / AMC"],["Medium","Smoke Detection"],["Use","Early Warning"],["System","Fire Alarm Detection"]],technical:[["Product Type","Smoke Detector"],["Category","Fire Detection Systems"],["Medium","Smoke Detection"],["Available Capacities","Single Unit"],["Fire Class","A, B, C"],["Form Factor","Ceiling Mounted"],["Recommended Use","Fire Alarm Detection"],["Variant","Smoke Detector"]]},
+        "heat-detector": {title:"Heat Detector",category:"Fire Alarm System",intro:"Heat Detector is suitable where temperature rise is the primary indication of fire.",image:"assets/images/custom/products/heat-detector.webp",specs:[["Capacity","Single Unit"],["Type","Wall Mounted"],["Service","New Supply / AMC"],["Medium","Heat Detection"],["Use","Fire Alarm Detection"],["Configuration","Fixed Temperature / Rate of Rise"]],technical:[["Product Type","Heat Detector"],["Category","Fire Detection Systems"],["Medium","Heat Detection"],["Available Capacities","Single Unit"],["Fire Class","A, B, C*"],["Form Factor","Ceiling Mounted"],["Recommended Use","Fire Alarm Detection"],["Variant","Heat Detector"]]}
+    };
 
-            var slug = new URLSearchParams(window.location.search).get("product") || "abc-portable-fire-extinguisher";
-            var product = products[slug] || products["abc-portable-fire-extinguisher"];
+    function rows(data) {
+        return data.map(function (row) {
+            return "<tr><th>" + row[0] + "</th><td>" + row[1] + "</td></tr>";
+        }).join("");
+    }
 
-document.title = "Fire Rangers - " + product.title;
-            document.getElementById("detailTitle").textContent = product.title;
-            document.getElementById("detailIntro").textContent = product.intro;
-            document.getElementById("mainSpecRows").innerHTML = rows(product.specs);
-            document.getElementById("technicalSpecRows").innerHTML = rows(product.technical);
-        })();
-    </script>
+    var slug = new URLSearchParams(window.location.search).get("product") || "abc-portable-fire-extinguisher";
+    var product = products[slug] || products["abc-portable-fire-extinguisher"];
+
+    document.title = "Fire Rangers - " + product.title;
+    document.getElementById("detailTitle").textContent = product.title;
+    document.getElementById("detailIntro").textContent = product.intro;
+    document.getElementById("mainSpecRows").innerHTML = rows(product.specs);
+    document.getElementById("technicalSpecRows").innerHTML = rows(product.technical);
+    if (product.image) {
+        document.getElementById("detailImage").src = product.image;
+        document.getElementById("detailImage").alt = product.title;
+    }
+})();
+</script>
 </body>
 </html>

@@ -120,7 +120,7 @@
   right: auto !important;
   top: 100% !important;
   transform: translateX(-50%) !important;
-  width: min(92vw, 1240px) !important;
+  width: min(80vw, 750px) !important;
   z-index: 99999 !important;
   margin: 0 !important;
 }
@@ -233,9 +233,10 @@
 .megamenu.product-megamenu .row{
   display: grid !important;
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 24px !important;
+  gap: 12px !important;
   width: 100% !important;
   margin: 0 !important;
+  padding: 0 10px !important;
 }
 
 .megamenu.product-megamenu .row .product-menu-card{
@@ -507,6 +508,24 @@
   display: flex !important;
   align-items: center !important;
   height: 100% !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+
+.fixed-header .sticky-header .main-menu .navigation > li > a:hover,
+.main-header.fixed-header .main-menu .navigation > li > a:hover{
+  color: #f0a35b !important;
+}
+
+/* Show navigation in sticky header */
+.sticky-header .main-menu .navigation{
+  display: flex !important;
+  align-items: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .fixed-header .sticky-header .main-menu .navigation > li > a:after{
@@ -750,4 +769,40 @@
   color: #721c24;
   background: #f8d7da;
   border: 1px solid #f5c6cb;
+}
+
+/* =====================================================================
+   Sticky header navigation - ensure menu items are visible
+   ===================================================================== */
+
+.sticky-header .main-menu .navigation {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.sticky-header .main-menu .navigation > li {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.sticky-header .main-menu .navigation > li > a {
+  color: #221d1d !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.sticky-header .main-menu .navigation > li > a:hover {
+  color: #d85b22 !important;
+}
+
+/* Fix the collapse div - show content */
+.sticky-header .main-menu .navbar-collapse {
+  display: block !important;
+}
+
+.sticky-header .main-menu .collapse:not(.show) {
+  display: block !important;
 }
