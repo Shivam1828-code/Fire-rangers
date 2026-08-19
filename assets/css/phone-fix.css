@@ -217,3 +217,109 @@
     font-size: 13px !important;
   }
 }
+
+/* =========================================
+   Loading Dots Animation
+   ========================================= */
+.loading-dots {
+  text-align: center;
+  margin-top: 16px;
+}
+.loading-dots span {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 8px;
+  background: #d85b22;
+  border-radius: 50%;
+  animation: loadingBounce 1.4s ease-in-out infinite;
+}
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes loadingBounce {
+  0%, 80%, 100% { transform: scale(0.4); opacity: 0.3; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* =========================================
+   Footer icons - side by side on mobile
+   ========================================= */
+.footer-bottom-inner {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+.footer-social {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  gap: 12px !important;
+}
+
+/* =========================================
+   Mobile Navbar - Logo Center Fix
+   ========================================= */
+@media (max-width: 991px) {
+  .header-lower .outer-box {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    min-height: 70px !important;
+  }
+  .main-header .logo-box,
+  .main-header.style-two .logo-box {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    left: 58% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 100 !important;
+    flex: none !important;
+    float: none !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .main-header .logo-box .logo,
+  .main-header.style-two .logo-box .logo {
+    max-width: 80px !important;
+    display: block !important;
+  }
+  .main-header .logo-box .logo img,
+  .main-header.style-two .logo-box .logo img {
+    height: 60px !important;
+    width: auto !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .main-header .support-box {
+    display: none !important;
+  }
+  .menu-area {
+    flex: none !important;
+  }
+  .menu-area .mobile-nav-toggler {
+    display: block !important;
+    padding: 10px !important;
+    float: left !important;
+  }
+  /* Mobile menu drawer - logo big and centered */
+  .mobile-menu .nav-logo {
+    text-align: center !important;
+    padding: 24px 0 20px !important;
+    margin-bottom: 10px !important;
+  }
+  .mobile-menu .nav-logo img {
+    height: 90px !important;
+    width: auto !important;
+    max-width: 90px !important;
+  }
+}

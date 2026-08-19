@@ -206,8 +206,11 @@
   }
   
   .footer-bottom-inner {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
   }
 }

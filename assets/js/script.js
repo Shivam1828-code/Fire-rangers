@@ -9,6 +9,22 @@
 		}
 	}
 
+	function initPreloaderDots() {
+		$('.txt-loading').each(function() {
+			if (!$(this).find('.loading-dots').length) {
+				$(this).append('<span class="letters-loading loading-dots">...</span>');
+			}
+		});
+	}
+
+	function updateFooterYear() {
+		var year = new Date().getFullYear();
+		$('.footer-copyright').each(function() {
+			var html = $(this).html();
+			$(this).html(html.replace(/(&copy;|©)\s*\d{4}/, '$1 ' + year));
+		});
+	}
+
 	if ($(".preloader-close").length) {
         $(".preloader-close").on("click", function(){
             $('.loader-wrap').delay(200).fadeOut(500);
@@ -584,6 +600,11 @@
    When document is loaded, do
    ========================================================================== */
 	
+	$(document).ready(function() {
+		initPreloaderDots();
+		updateFooterYear();
+	});
+
 	$(window).on('load', function() {
 		handlePreloader();
 		enableMasonry();
