@@ -246,6 +246,35 @@
 }
 
 /* =========================================
+   Footer - Quick Links & Products side by side on mobile
+   ========================================= */
+@media (max-width: 991px) {
+  .fire-rangers-footer .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+
+  .fire-rangers-footer .footer-grid .footer-col:first-child,
+  .fire-rangers-footer .footer-grid .footer-col:last-child {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .fire-rangers-footer .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .fire-rangers-footer .footer-grid .footer-col:first-child,
+  .fire-rangers-footer .footer-grid .footer-col:last-child {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+/* =========================================
    Footer icons - side by side on mobile
    ========================================= */
 .footer-bottom-inner {
